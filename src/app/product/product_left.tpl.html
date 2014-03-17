@@ -1,0 +1,61 @@
+<div class="flex flex-col">
+  <div class="flex-fixed ptitleright">
+    <div class="flex flex-row">
+      <div class="col-md-11 label-center">
+        Add New Item
+      </div>
+      <button class="col-md-1 pull-right btn btn-md btn-primary" ng-click="addItem(newItem)">
+        Add
+        <span class="glyphicon glyphicon-chevron-right">
+          <span>
+      </button>
+    </div>
+  </div>
+  <div class="flex flex-row padditem">
+    <div class="flex flex-col col-md-11">
+      <div class="flex flex-col">
+        <form class="form-horizontal flex scroll-y" role="form">
+          <div class="form-group">
+            <label class="col-md-2 control-label label-align">Category</label>
+            <div class="col-md-10">
+              <select ng-model="objectSelect.filter" ng-change="Filter(objectSelect.filter)" ng-options="cat.name for cat in categories" class="form-control ng-scope ng-valid ng-dirty" type="text">
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-2 control-label label-align">Item Name</label>
+            <div class="col-md-10">
+              <input type="text" ng-model="newItem.name" class="form-control" placeholder="Item Name">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-md-2 control-label label-align">Image</label>
+            <div class="col-md-10">
+              <!-- <input type="text" class="form-control" placeholder="Image"> -->
+              <input type="file" class="form-control" name="file" onchange="angular.element(this).scope().uploadFile(this.files)" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-md-2 control-label label-align">Discription</label>
+            <div class="col-md-10">
+              <textarea ng-model="newItem.description"class="form-control" rows="5"></textarea>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-2 control-label label-align">Price</label>
+            <div class="col-md-10">
+              <input type="text" ng-model="newItem.price" class="form-control" placeholder="Price(VND)">
+            </div>
+            <div class="col-md-1 pvr">
+
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="col-md-1 flex-fixed pvrr">
+    </div>
+  </div>
+</div>

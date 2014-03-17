@@ -1,0 +1,58 @@
+<div class="panel panel-default panel-left">
+  <div class="panel-header">
+    <div class="alert alert-success">Bill</div>
+  </div>
+  <div class="panel-body">
+    <div class="modal-body">
+      <form class="form-horizontal" role="form">
+        <div class="form-group">
+          <label for="inputEmail3" class="col-sm-3 control-label label-align">Tìm Kiếm</label>
+          <div class="col-sm-9">
+            <input type="text" ng-model="name" typeahead="name.name for name in getNames($viewValue)|filter:$viewValue" class="form-control" placeholder="Tên Khách Hàng" typeahead-on-select="selectMatch($item)">
+          </div>
+        </div>
+        <hr>
+        <div ng-model="info.customer">
+          <div class="form-group">
+            <label for="input-name" class="col-sm-3 control-label label-align">Tên</label>
+            <div class="col-sm-9">
+              <input class="form-control" id="input-name" placeholder="Tên" value="{{info.customer.name}}">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="input-phone" class="col-sm-3 control-label label-align">SĐT</label>
+            <div class="col-sm-9">
+              <input class="form-control" id="input-phone" placeholder="SĐT" value="{{info.customer.phone}}">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="input-addr" class="col-sm-3 control-label label-align">Địa chỉ</label>
+            <div class="col-sm-9">
+              <input class="form-control" id="input-addr" placeholder="Địa Chỉ" value="{{info.customer.address}}">
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div ng-model="info.user">
+          <div class="form-group">
+            <label for="input-deliver" class="col-sm-3 control-label label-align">Người giao</label>
+            <div class="col-sm-9">
+              <input class="form-control" id="input-deliver" placeholder="Người Giao" ng-model="userName" typeahead="name.name for name in getUserNames($viewValue)|filter:$viewValue" typeahead-on-select="selectUserMatch($item)">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="input-phonedeliver" class="col-sm-3 control-label label-align">SĐT</label>
+            <div class="col-sm-9">
+              <input class="form-control" id="input-phonedeliver" placeholder="SĐT Người Giao" value="{{info.user.phone}}">
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="panel-footer">
+      <button class="btn btn-primary" ng-click="ok()">OK</button>
+    <!-- </div> -->
+  </div>
+</div>

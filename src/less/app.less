@@ -1,0 +1,279 @@
+ @tab-height: 50px;
+
+.main {
+  /*   background: lightgreen; */
+}
+// HOME .home {
+//   background: white;
+// }
+.cafe-category {
+  height: @tab-height;
+  .citem {
+    height: 100%;
+    width: 20%;
+    display: inline-block;
+    padding: 5px 1px;
+    .btn {
+      height: 100%;
+      padding: 9px 0;
+      width: 100%;
+      border-radius: 0px;
+      &:hover {
+        margin-top: 0;
+        border-bottom-width: 0 1px 4px 1px;
+      }
+    }
+    .btn-group {
+      .dropdown-menu > li > a:hover {
+        background-color: @brand-info;
+      }
+    }
+    &.search {
+      width: 5%;
+    }
+  }
+}
+.cafe-item-list {
+  margin: 15px 0 0 0px;
+  .item {
+    height: 90px;
+    width: 100% / 5;
+    display: inline-block;
+    padding: 5px 5px;
+    margin: 0;
+    .btn {
+      height: 100%;
+      width: 100%;
+      border-radius: 0px;
+      border: none;
+      padding: 2px;
+      &:hover {
+        margin-top: 0;
+      }
+    }
+  }
+  .pitem {
+    width: 100%/3;
+    height: 100px;
+  }
+}
+.imgcontainer {
+  font-weight: bold;
+  color: black;
+  height: 100%;
+  padding: 2px;
+  .img{
+    margin: auto;
+  }
+  .itemname {
+    height: 80%;
+    white-space: normal;
+    .col-md-9{
+      padding-right:0px;
+      padding-left: 0px;
+    }
+    .col-md-3{
+      padding-right: 0px;
+      padding-left: 0px;
+    }
+  }
+
+  .itemprice {
+    height: 20%;
+    text-align: right;
+    padding: 0;
+  }
+}
+
+.footer {
+  height: 50px;
+  background: @gray-lighter;
+}
+
+.img-responsive{
+    margin: auto !important;
+  }
+.cafesearch {
+}
+.cafebtn {
+  // background-color: #FF8C00;
+}
+.nav-tabs .nav-justified > li.active > a:hover {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.nav-tabs.nav-justified > li > a{
+  border-radius: 0;
+  border-bottom: 1px solid  #33A6B2;
+}
+.cafe-sidebar {
+  //padding: 1px;
+  margin-top: 5px;
+  padding: 0px;
+  .flex-col;
+  .tabbable {
+    .flex-col;
+  }
+  .tab-content {
+    .flex;
+    .scroll-y;
+    .modal-body {
+      padding: 40px 2px;
+    }
+  }
+  .nav-tabs {
+    .flex-fixed;
+    .li .a{
+      border-right: 1px solid red;
+    }
+  }
+  // .nav-tabs > li > a {
+  //   .tab-btn;
+  //   .tab-btn.primary;
+  // }
+  .nav-tabs {
+    border-right: 1px solid red;
+    .active {
+      a {
+        //position: relative;
+        //top: 4px;
+        background-color: #7BBC28;
+        border-width: 0 1px 0px 1px;
+        &:hover {
+          background-color: #7BBC28;
+          border-width: 0 1px 0px 1px;
+        }
+        //.tab-btn.success;
+      }
+    }
+  }
+}
+.label-align {
+  text-align:left !important;
+}
+.product-header {
+  /*   border: 1px solid blue; */
+}
+.product-main {
+}
+.product-footer {
+  border: 1px solid red;
+}
+.padditem {
+   margin-top: 15px;
+  .form-group {
+    margin: 0px 0px 15px 0px;
+  }
+
+}
+.pvrr {
+  border-right: 1px solid black;
+  margin-right: -1px;
+}
+.pvrl {
+  border-left: 1px solid black;
+  margin-left: -1px;
+}
+.label-center {
+  text-align: center !important;
+}
+.ptitleright {
+  padding-top: 10px;
+  font-weight: bold;
+  color: @btn-info-bg;
+
+}
+
+.pedit {
+  .btn{
+    width: 55px;
+  }
+
+}
+
+.cafe-menu{
+  padding: 0px;
+}
+
+
+.form-horizontal .form-group {
+  margin-left: 0px;
+  margin-right: 0px;
+  .label{
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+  .control-label{
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+.alert{
+  margin-bottom: 0px;
+}
+
+.panel-body{
+  padding: 0px;
+}
+
+.glyphicon{
+   cursor: pointer;
+}
+
+.navbar{
+  border-radius: 0px;
+  background-color: #4D4478;
+}
+
+.footer{
+  background-color: #4D4478;
+}
+
+.panel-left{
+  margin-top: 23px;
+}
+
+.panel-left{
+  .panel-heading{
+    .panel-title{
+      display: inline-block;
+      .span{
+        display: inline-block;
+      }
+
+    }
+  }
+  .panel-body{
+    .form-control{
+      margin-top: 10px;
+    }
+    .list-group{
+      .list-group-item{
+        margin-top: 5px;
+      }
+    }
+  }
+}
+
+
+.flexnopadding{
+  .col-md-8 {
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+
+  .col-md-3{
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+
+  .col-md-1{
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+}
+.nocursor{
+  cursor: default;
+}

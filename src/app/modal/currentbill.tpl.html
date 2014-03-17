@@ -1,0 +1,24 @@
+<div ng-repeat="item in items">
+  <div class="panel panel-success panel-left">
+    <div class="panel-heading">
+      <span class="glyphicon glyphicon-chevron-down" ng-click="Down(item._id)" ng-show="item.down">
+      </span>
+      <span class="glyphicon glyphicon-chevron-up" ng-click="Up(item._id)" ng-show="item.up">
+      </span>
+      <h3 class="panel-title">
+        <span>{{item.name}} ({{item.finalPrice}} VND)</span>
+      </h3>
+      <span class="glyphicon glyphicon-remove pull-right" ng-click="deleteItem(item)"></span>
+    </div>
+    <div class="panel-body" ng-show="item.showBody">
+      <select ng-change="selectAction(item._id, PlusObject.selectedPlus)" ng-model="PlusObject.selectedPlus" ng-options="plus as plus.name +' (' + plus.price +')' for plus in Plus" class="form-control ng-scope ng-valid ng-dirty" type="text">
+      </select>
+      <ul class="list-group">
+        <li ng-repeat="plus in listPlus[item._id]" class="list-group-item list-group-item-danger">{{plus.name + ' (' + plus.price+')'}} VND
+          <span class="glyphicon glyphicon-remove pull-right" ng-click="removePlus(item._id, plus)"></span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+</div>
