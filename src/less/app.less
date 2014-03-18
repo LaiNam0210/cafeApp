@@ -1,11 +1,9 @@
- @tab-height: 50px;
+@tab-height: 50px;
+@major-color: #92817F;
 
-.main {
-  /*   background: lightgreen; */
+.home {
+  background: @major-color;
 }
-// HOME .home {
-//   background: white;
-// }
 .cafe-category {
   height: @tab-height;
   .citem {
@@ -104,10 +102,10 @@
 }
 .nav-tabs.nav-justified > li > a{
   border-radius: 0;
-  border-bottom: 1px solid  #33A6B2;
+  //border-bottom: 1px solid  #33A6B2;
 }
 .cafe-sidebar {
-  //padding: 1px;
+
   margin-top: 5px;
   padding: 0px;
   .flex-col;
@@ -132,15 +130,14 @@
   //   .tab-btn.primary;
   // }
   .nav-tabs {
-    border-right: 1px solid red;
     .active {
       a {
         //position: relative;
         //top: 4px;
-        background-color: #7BBC28;
+        background-color: @major-color;
         border-width: 0 1px 0px 1px;
         &:hover {
-          background-color: #7BBC28;
+          background-color: @major-color;
           border-width: 0 1px 0px 1px;
         }
         //.tab-btn.success;

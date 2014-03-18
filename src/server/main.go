@@ -1,7 +1,10 @@
 package main
 
 import (
+	// "encoding/json"
 	"flag"
+	"fmt"
+	// "io/ioutil"
 	"log"
 	"net/http"
 	"time"
@@ -111,8 +114,20 @@ func main() {
 
 	fileServer := http.FileServer(http.Dir(rootDir))
 	http.Handle("/", fileServer)
-
+	http.HandleFunc("/login", Login)
 	log.Printf("Start server, port=%v, dir=%v", *flPort, rootDir)
 	http.ListenAndServe(":"+*flPort, nil)
 	http.ListenAndServe(":"+*flPort, ctx.ClearHandler(http.DefaultServeMux))
+}
+
+type t struct {
+	Username string `json:"username"`
+	Password string `json:"password"`
+}
+
+func Login(w http.ResponseWriter, r *http.Request) {
+	// info := r.PostForm
+	r.ParseForm()
+	username := r.FormValue("username")
+	fmt.Println(username)
 }
